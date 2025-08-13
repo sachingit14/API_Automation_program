@@ -1,11 +1,16 @@
-package com.thetestingacademy.ex_02_RA_concepts;
+package com.thetestingacademy.ex_03_TestNG_AllureReport;
 
 import io.restassured.RestAssured;
+import org.testng.annotations.Test;
 
-public class LAB03_Multiple_TC {
-    public static void main(String[] args) {
+public class Lab04_API_testcases {
+    String pincode = "450564";
+
+    @Test
+    public void TC1_get_positive(){
+
         System.out.println("------------//TC1-----------------");
-        String pincode = "400606";
+        pincode = "400606";
         RestAssured
                 .given()
                 .baseUri("https://api.zippopotam.us/")
@@ -14,7 +19,11 @@ public class LAB03_Multiple_TC {
                 .get()
                 .then()
                 .log().all().statusCode(200);
-       System.out.println("------------//TC2-----------------");
+    }
+
+    @Test
+    public void TC2_get_negative(){
+        System.out.println("------------//TC2-----------------");
         pincode = "sachin";
         RestAssured
                 .given()
@@ -24,6 +33,10 @@ public class LAB03_Multiple_TC {
                 .get()
                 .then()
                 .log().all().statusCode(200);
+    }
+
+    @Test
+    public void TC3_get_negative(){
         System.out.println("--------------//TC3---------------");
         pincode = "!@#";
         RestAssured
@@ -34,7 +47,5 @@ public class LAB03_Multiple_TC {
                 .get()
                 .then()
                 .log().all().statusCode(200);
-     //   System.out.println("-----------------------------");
-
     }
 }
