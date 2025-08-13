@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Sachin/IdeaProjects/API_Automation_program">
+        <classes>
+            <class name="com.thetestingacademy.ex_04_RestAssured_HTTP_method.GET.Lab007_get_NON_bdd_style">
+            </class>
+            <class name="com.thetestingacademy.ex_04_RestAssured_HTTP_method.POST.Lab008_post_bdd_style">
+            </class>
+            <class name="com.thetestingacademy.ex_04_RestAssured_HTTP_method.PUT.Lab010_put_NON_bdd_style">
+            </class>
+            <class name="com.thetestingacademy.ex_04_RestAssured_HTTP_method.PATCH.Lab011_patch_NON_bdd_style">
+            </class>
+            <class name="com.thetestingacademy.ex_04_RestAssured_HTTP_method.DELETE.Lab012_delete_Non_bdd_style">
+            </class>
+        </classes>
+    </test>
+</suite>
